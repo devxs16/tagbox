@@ -71,26 +71,7 @@ public/
 6. **Newsletter** — email capture for next drop notifications
 7. **Footer** — oversized brand mark + link columns
 
-## Deployment — Vercel
 
-This project is pre-configured for Vercel via Nitro's `vercel` preset (see `vite.config.ts` and `vercel.json`).
-
-### Deploy in 3 steps
-
-1. Push this repo to GitHub / GitLab / Bitbucket.
-2. In the Vercel dashboard, **Add New → Project** and import the repo.
-3. Accept the defaults — `vercel.json` already sets:
-   - **Install:** `bun install`
-   - **Build:** `bun run build`
-   - **Output:** `.vercel/output/` (Vercel Build Output API, emitted by Nitro)
-
-Or from your terminal:
-
-```bash
-bun install -g vercel
-vercel        # preview deploy
-vercel --prod # production deploy
-```
 
 ### Switching targets
 
@@ -103,11 +84,6 @@ nitro: { preset: "cloudflare-module" }
 nitro: { preset: "netlify" }
 ```
 
-## Notes for shipping
-
-- Replace `og:image` references and the favicon with brand-final assets if you have them.
-- Swap the placeholder product hrefs in `src/routes/index.tsx` once you wire up commerce (Shopify, Stripe, or Lovable Cloud).
-- The newsletter form is non-functional — connect it to your ESP or a Lovable Cloud server function.
 
 ## License
 
